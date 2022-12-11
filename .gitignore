@@ -1,0 +1,9 @@
+*.un~
+.idea
+.env
+env.py
+venv
+__pycache__
+.vscode
+.DS_Store
+node_modules/
