@@ -22,7 +22,13 @@ import datetime
 
 
 class ForgotPassword(Resource):
+    @staticmethod
     def post(self):
+        """
+        We are creating a reset token that expires in 24 hours and sending it to the user's email
+        :return: the send_email function.
+        """
+
         url = request.host_url + "reset/"
         try:
             body = request.get_json()
