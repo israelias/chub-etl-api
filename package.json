@@ -1,12 +1,16 @@
 {
-  "name": "@israelias/chub-etl-api",
+  "name": "chub-etl-api",
   "version": "1.0.0",
   "description": "Thrift DJ-DRF Models and Serverless ETL Functions using Vercel's Python Runtime",
   "author": "israelias <israelias.js@gmail.com>",
+  "repository": "israelias/chub-etl-api",
+  "license": "MIT",
   "scripts": {
     "virtualenv": "pip install virtualenv && virtualenv venv",
     "activate": "source venv/bin/activate",
     "install": "pip install -r requirements.txt",
-    "start": "source venv/bin/activate && python run.py"
+    "start": "source venv/bin/activate && python run.py",
+    "docs:start": "mkdocs serve",
+    "docs:build": "mkdocs build"
   }
 }

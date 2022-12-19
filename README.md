@@ -1,24 +1,80 @@
-# CH ETL Backend API
+<!-- Anchor for Back To Top -->
+<a name="readme-top"></a>
 
-This is a migration.
+<div align="center">
+  <a href="https://github.com/israelias/chub-etl-api">
+    <img src="https://raw.githubusercontent.com/israelias/cheathub_mono/dev/images/logo_dash_red.png" alt="Logo" width="80" height="80">
+  </a>
 
-[//]: # (The restful API is deployed at [cheathub-backend.herokuapp.com/]&#40;https://cheathub-backend.herokuapp.com/&#41;)
+<h3 align="center">cHub ETL Model and API</h3>
 
-> *Note:* Open API spec is forthcoming. Please see `database/models.py` to preview the snippet, collection and user
-> document models.
+  <p align="center">
 
-## Development Server Configuration
+Application Serverless ETL Query and Resource API
+for [@israelias/cheathub/frontend](https://github.com/israelias/cheathub/tree/master/frontend)
+<br />
+<a href="https://israelias.github.io/chub-etl-api/"><strong>Explore the docs »</strong></a>
+<br />
+<br />
+·
+<a href="https://github.com/israelias/chub-etl-api/issues">Report Bug</a>
+·
+<a href="https://github.com/israelias/chub-etl-api/pulls">Create a PR</a>
+  </p>
+</div>
 
-- Clone this repository.
-- Install/run a virtual environment: `pip install virtualenv`
-- Create a virtual environment (name "venv" can be any): `virtualenv venv`
-- Within the new venv, install the project's requirements:
-  `(venv) pip install requirements.txt`
-- Alternatively, just install the requirements: `pip install -r requirements.txt`
+<!-- ABOUT THE PROJECT -->
+
+[//]: # (## About The Project)
+
+
+[//]: # (<p align="right"><a href="#readme-top">back to top</a></p>)
+
+## Getting Started
+
+> Jump to [mongodb env vars](#database)
+
+<!-- ENVIRONMENT PREREQUISITES -->
+
+### Environment Prerequisites
+
+> The latest releases Python 3.4+ and Python 2.7.9+, as well as the virtual environments `virtualenv` and `pyvenv`,
+> automatically ship with PIP
+
+[Source](https://www.dataquest.io/blog/install-pip-windows/#:~:text=The%20latest%20releases%20Python%203.4,have%20this%20advantage%20by%20default.)
+
+- Please have [`python3`](https://realpython.com/installing-python/) globally installed on your machine.
+
+### Installation
+
+* Clone this Repo
+    ```sh
+    git clone ssh://git@github.com/israelias/chub-etl-api.git
+    ```
+* Jump into this directory
+    ```sh
+    cd chub-etl-api
+    ```
+* Create a Virtual Env
+    ```sh
+     python -m venv venv   
+    ```
+* Activate your environment
+  ```sh
+   source venv/bin/activate 
+  ```
+* Install existing `requirements`
+  ```sh
+  (venv) pip install -r requirements.txt
+  ```
+* Run the development environment
+  ```sh
+  (venv) python run.py
+  ```
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Available Scripts
-
-In this half of the monorepo, you can run:
 
 ### `python run.py`
 
@@ -28,13 +84,18 @@ Open [http://localhost:5000/admin](http://localhost:5000/admin) to view the admi
 ensure `BASIC_AUTH` variables are set).
 
 Open [http://localhost:5000/api/snippets](http://localhost:5000/api/snippets) to view the JSON response format of all
-public snippets -- assuming `snippet` objects have been created. Otherwise, use Postman to create documents locally (API
-spec is forthcoming!).
+public snippets -- assuming `snippet` objects have been created. Otherwise, use Postman to create documents locally.
 
 The page will reload if you make edits.\
 You will also see any errors in the console.
 
-## Environment Variables
+### Deployed Resources
+
+- [/docs](https://israelias.github.io/chub-etl-api/)
+- [/admin](https://chub-etl-api.vercel.app/admin)
+- [/api/snippets](https://chub-etl-api.vercel.app/api/snippets)
+
+## Database
 
 To recreate this server, the following environment variables are required:
 
@@ -175,8 +236,8 @@ You can add documents via Postman or Mongo Compass.
 
 ## Resources
 
-- https://squidfunk.github.io/mkdocs-material/getting-started/
-- https://mkdocstrings.github.io/usage/#autodoc-syntax
-- https://www.mkdocs.org/getting-started/#adding-pages
+- [mkdocs-material](https://squidfunk.github.io/mkdocs-material/getting-started/)
+- [mkdocstrings](https://mkdocstrings.github.io/usage/#autodoc-syntax)
+- [mkdocs](https://www.mkdocs.org/getting-started/#adding-pages)
 
-
+<p align="right"><a href="#readme-top">back to top</a></p>
