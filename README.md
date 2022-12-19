@@ -176,7 +176,7 @@ You can add documents via Postman or Mongo Compass.
 ## Resources
 
 - https://squidfunk.github.io/mkdocs-material/getting-started/
-
-- 
+- https://mkdocstrings.github.io/usage/#autodoc-syntax
+- https://www.mkdocs.org/getting-started/#adding-pages
 
 
