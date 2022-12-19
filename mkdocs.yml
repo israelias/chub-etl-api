@@ -1,0 +1,17 @@
+site_name: CheatHub DB/API Docs
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings
+
+
+nav:
+  - index.md
+  - admin.md
+  - database.md
+  - resources.md
+  - services.md

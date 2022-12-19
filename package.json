@@ -1,9 +1,8 @@
 {
-  "name": "@cheathub/backend",
+  "name": "@israelias/chub-etl-api",
   "version": "1.0.0",
-  "description": "Flask backend.",
+  "description": "Thrift DJ-DRF Models and Serverless ETL Functions using Vercel's Python Runtime",
   "author": "israelias <israelias.js@gmail.com>",
-  "private": true,
   "scripts": {
     "virtualenv": "pip install virtualenv && virtualenv venv",
     "activate": "source venv/bin/activate",
