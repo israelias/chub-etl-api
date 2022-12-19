@@ -1,0 +1,2065 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Admin - CheatHub DB/API Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#admin.admin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CheatHub DB/API Docs" class="md-header__button md-logo" aria-label="CheatHub DB/API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CheatHub DB/API Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Admin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CheatHub DB/API Docs" class="md-nav__button md-logo" aria-label="CheatHub DB/API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CheatHub DB/API Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome to MkDocs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Admin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Admin
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin.admin" class="md-nav__link">
+    admin.admin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.admin.initialize_admin" class="md-nav__link">
+    initialize_admin()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.basicauth" class="md-nav__link">
+    admin.basicauth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.basicauth.initialize_basicauth" class="md-nav__link">
+    initialize_basicauth()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mail" class="md-nav__link">
+    admin.mail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mail.initialize_mail" class="md-nav__link">
+    initialize_mail()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview" class="md-nav__link">
+    admin.mongoview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview.AuthException" class="md-nav__link">
+    AuthException
+  </a>
+  
+    <nav class="md-nav" aria-label="AuthException">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.AuthException.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview.MyAdminIndexView" class="md-nav__link">
+    MyAdminIndexView
+  </a>
+  
+    <nav class="md-nav" aria-label="MyAdminIndexView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyAdminIndexView.inaccessible_callback" class="md-nav__link">
+    inaccessible_callback()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyAdminIndexView.is_accessible" class="md-nav__link">
+    is_accessible()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview.MyModelView" class="md-nav__link">
+    MyModelView
+  </a>
+  
+    <nav class="md-nav" aria-label="MyModelView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyModelView.inaccessible_callback" class="md-nav__link">
+    inaccessible_callback()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyModelView.is_accessible" class="md-nav__link">
+    is_accessible()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.views" class="md-nav__link">
+    admin.views
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.views.initialize_views" class="md-nav__link">
+    initialize_views()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/" class="md-nav__link">
+        Database
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/" class="md-nav__link">
+        Services
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin.admin" class="md-nav__link">
+    admin.admin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.admin.initialize_admin" class="md-nav__link">
+    initialize_admin()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.basicauth" class="md-nav__link">
+    admin.basicauth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.basicauth.initialize_basicauth" class="md-nav__link">
+    initialize_basicauth()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mail" class="md-nav__link">
+    admin.mail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mail.initialize_mail" class="md-nav__link">
+    initialize_mail()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview" class="md-nav__link">
+    admin.mongoview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview.AuthException" class="md-nav__link">
+    AuthException
+  </a>
+  
+    <nav class="md-nav" aria-label="AuthException">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.AuthException.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview.MyAdminIndexView" class="md-nav__link">
+    MyAdminIndexView
+  </a>
+  
+    <nav class="md-nav" aria-label="MyAdminIndexView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyAdminIndexView.inaccessible_callback" class="md-nav__link">
+    inaccessible_callback()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyAdminIndexView.is_accessible" class="md-nav__link">
+    is_accessible()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.mongoview.MyModelView" class="md-nav__link">
+    MyModelView
+  </a>
+  
+    <nav class="md-nav" aria-label="MyModelView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyModelView.inaccessible_callback" class="md-nav__link">
+    inaccessible_callback()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin.mongoview.MyModelView.is_accessible" class="md-nav__link">
+    is_accessible()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.views" class="md-nav__link">
+    admin.views
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin.views.initialize_views" class="md-nav__link">
+    initialize_views()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Admin</h1>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="admin.admin"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="admin.admin.initialize_admin" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_admin</span><span class="p">(</span><span class="n">app</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The initialize_admin function is used to initialize the admin interface.
+It takes in an app object and initializes the admin interface with a cerulean theme.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>app</code></td>
+          <td>
+          </td>
+          <td><p>Access the application instance</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>The admin object that is created by the init_app function</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>admin/admin.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">initialize_admin</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The initialize_admin function is used to initialize the admin interface.</span>
+<span class="sd">    It takes in an app object and initializes the admin interface with a cerulean theme.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        app: Access the application instance</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The admin object that is created by the init_app function</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">admin</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;FLASK_ADMIN_SWATCH&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cerulean&quot;</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="admin.basicauth"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="admin.basicauth.initialize_basicauth" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_basicauth</span><span class="p">(</span><span class="n">app</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The initialize_basicauth function initializes the Flask app with basic authentication.
+It sets the username and password from environment variables, which are set in Vercel.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>app</code></td>
+          <td>
+          </td>
+          <td><p>Access the flask app instance</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>The app and the user name and password</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>admin/basicauth.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">initialize_basicauth</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The initialize_basicauth function initializes the Flask app with basic authentication.</span>
+<span class="sd">    It sets the username and password from environment variables, which are set in Vercel.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        app: Access the flask app instance</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The app and the user name and password</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">basic_auth</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;BASIC_AUTH_USERNAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;BASIC_AUTH_USERNAME&quot;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;BASIC_AUTH_PASSWORD&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;BASIC_AUTH_PASSWORD&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="admin.mail"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="admin.mail.initialize_mail" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_mail</span><span class="p">(</span><span class="n">app</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The initialize_mail function initializes the Flask-Mail extension.
+It sets up the mail server, port, username and password for sending emails.
+The default sender is also set to be the email address of MAIL_DEFAULT_SENDER.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>app</code></td>
+          <td>
+          </td>
+          <td><p>Access the application instance</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>A configured flask mail object</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>admin/mail.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">initialize_mail</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The initialize_mail function initializes the Flask-Mail extension.</span>
+<span class="sd">    It sets up the mail server, port, username and password for sending emails.</span>
+<span class="sd">    The default sender is also set to be the email address of MAIL_DEFAULT_SENDER.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        app: Access the application instance</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A configured flask mail object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mail</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MAIL_SERVER&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MAIL_SERVER&quot;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MAIL_PORT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MAIL_PORT&quot;</span><span class="p">))</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MAIL_USERNAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MAIL_USERNAME&quot;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MAIL_PASSWORD&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MAIL_PASSWORD&quot;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MAIL_DEFAULT_SENDER&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MAIL_DEFAULT_SENDER&quot;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MAIL_USE_SSL&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="admin.mongoview"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="admin.mongoview.AuthException" class="doc doc-heading">
+        <code>AuthException</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="werkzeug.exceptions.HTTPException">HTTPException</span></code></p>
+
+  
+      <p>This class inherits from HTTPException and is used to raise an exception when a user is not authenticated.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>admin/mongoview.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AuthException</span><span class="p">(</span><span class="n">HTTPException</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class inherits from HTTPException and is used to raise an exception when a user is not authenticated.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The __init__ function is the constructor for a class. It is called whenever an instance of a class is created.</span>
+<span class="sd">        The __init__ function can take arguments, but self (the first one) will always be the instance that has just been created.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Represent the instance of the object itself</span>
+<span class="sd">            message: Display the message to the user</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The response object that is passed into the super function</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">Response</span><span class="p">(</span>
+                <span class="s2">&quot;You could not be authenticated. Please refresh the page.&quot;</span><span class="p">,</span>
+                <span class="mi">401</span><span class="p">,</span>
+                <span class="p">{</span><span class="s2">&quot;WWW-Authenticate&quot;</span><span class="p">:</span> <span class="s1">&#39;Basic realm=&quot;Login Required&quot;&#39;</span><span class="p">},</span>
+            <span class="p">),</span>
+        <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="admin.mongoview.AuthException.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The <strong>init</strong> function is the constructor for a class. It is called whenever an instance of a class is created.
+The <strong>init</strong> function can take arguments, but self (the first one) will always be the instance that has just been created.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>self</code></td>
+          <td>
+          </td>
+          <td><p>Represent the instance of the object itself</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>message</code></td>
+          <td>
+          </td>
+          <td><p>Display the message to the user</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>The response object that is passed into the super function</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>admin/mongoview.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The __init__ function is the constructor for a class. It is called whenever an instance of a class is created.</span>
+<span class="sd">    The __init__ function can take arguments, but self (the first one) will always be the instance that has just been created.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        self: Represent the instance of the object itself</span>
+<span class="sd">        message: Display the message to the user</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The response object that is passed into the super function</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="n">message</span><span class="p">,</span>
+        <span class="n">Response</span><span class="p">(</span>
+            <span class="s2">&quot;You could not be authenticated. Please refresh the page.&quot;</span><span class="p">,</span>
+            <span class="mi">401</span><span class="p">,</span>
+            <span class="p">{</span><span class="s2">&quot;WWW-Authenticate&quot;</span><span class="p">:</span> <span class="s1">&#39;Basic realm=&quot;Login Required&quot;&#39;</span><span class="p">},</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="admin.mongoview.MyAdminIndexView" class="doc doc-heading">
+        <code>MyAdminIndexView</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="flask_admin.AdminIndexView">AdminIndexView</span></code></p>
+
+  
+      <p>It's a class that inherits from the AdminIndexView class, and it overrides the index() method</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>admin/mongoview.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">MyAdminIndexView</span><span class="p">(</span><span class="n">AdminIndexView</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;It&#39;s a class that inherits from the AdminIndexView class, and it overrides the index() method&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">is_accessible</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The is_accessible function is used to check if the user has logged in.</span>
+<span class="sd">        If they have not, then they are redirected to the login page. If they have,</span>
+<span class="sd">        then we return True and move on.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Access the attributes and methods of the class in python</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            True if the user is authenticated and false otherwise</span>
+
+<span class="sd">        Doc Author:</span>
+<span class="sd">            Trelent</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">basic_auth</span><span class="o">.</span><span class="n">authenticate</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">AuthException</span><span class="p">(</span><span class="s2">&quot;Not authenticated.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">inaccessible_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The inaccessible_callback function is called when a user attempts to access an endpoint that requires authentication.</span>
+<span class="sd">        It redirects the user to the login page, and provides them with a message explaining why they were denied access.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Access the class attributes</span>
+<span class="sd">            name: Set the name of the view that will be called if a user is not logged in</span>
+<span class="sd">            **kwargs: Pass keyworded variable length of arguments to a function</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A redirect to the login page</span>
+
+<span class="sd">        Doc Author:</span>
+<span class="sd">            Trelent</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">basic_auth</span><span class="o">.</span><span class="n">challenge</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="admin.mongoview.MyAdminIndexView.inaccessible_callback" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">inaccessible_callback</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The inaccessible_callback function is called when a user attempts to access an endpoint that requires authentication.
+It redirects the user to the login page, and provides them with a message explaining why they were denied access.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>self</code></td>
+          <td>
+          </td>
+          <td><p>Access the class attributes</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+          </td>
+          <td><p>Set the name of the view that will be called if a user is not logged in</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td><p>Pass keyworded variable length of arguments to a function</p></td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>A redirect to the login page</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="doc-author">
+  <summary>Doc Author</summary>
+  <p>Trelent</p>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>admin/mongoview.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">inaccessible_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The inaccessible_callback function is called when a user attempts to access an endpoint that requires authentication.</span>
+<span class="sd">    It redirects the user to the login page, and provides them with a message explaining why they were denied access.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        self: Access the class attributes</span>
+<span class="sd">        name: Set the name of the view that will be called if a user is not logged in</span>
+<span class="sd">        **kwargs: Pass keyworded variable length of arguments to a function</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A redirect to the login page</span>
+
+<span class="sd">    Doc Author:</span>
+<span class="sd">        Trelent</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">basic_auth</span><span class="o">.</span><span class="n">challenge</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="admin.mongoview.MyAdminIndexView.is_accessible" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_accessible</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The is_accessible function is used to check if the user has logged in.
+If they have not, then they are redirected to the login page. If they have,
+then we return True and move on.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>self</code></td>
+          <td>
+          </td>
+          <td><p>Access the attributes and methods of the class in python</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>True if the user is authenticated and false otherwise</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="doc-author">
+  <summary>Doc Author</summary>
+  <p>Trelent</p>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>admin/mongoview.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_accessible</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The is_accessible function is used to check if the user has logged in.</span>
+<span class="sd">    If they have not, then they are redirected to the login page. If they have,</span>
+<span class="sd">    then we return True and move on.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        self: Access the attributes and methods of the class in python</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if the user is authenticated and false otherwise</span>
+
+<span class="sd">    Doc Author:</span>
+<span class="sd">        Trelent</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">basic_auth</span><span class="o">.</span><span class="n">authenticate</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="n">AuthException</span><span class="p">(</span><span class="s2">&quot;Not authenticated.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="admin.mongoview.MyModelView" class="doc doc-heading">
+        <code>MyModelView</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="flask_admin.contrib.mongoengine.view.ModelView">ModelView</span></code></p>
+
+  
+      <p>This class is a subclass of <code>ModelView</code> that is used to create, read, update, and delete (CRUD) records in the
+database</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>admin/mongoview.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">MyModelView</span><span class="p">(</span><span class="n">ModelView</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class is a subclass of `ModelView` that is used to create, read, update, and delete (CRUD) records in the</span>
+<span class="sd">    database&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">is_accessible</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The is_accessible function is used to check if the user has access to a particular view.</span>
+<span class="sd">        It is called automatically by Flask-Login and will return True if the user can access a page,</span>
+<span class="sd">        or False otherwise. This function will be passed into every view as an @login_required decorator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Access the attributes and methods of the class in python</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            True if the user is authenticated</span>
+
+<span class="sd">        Doc Author:</span>
+<span class="sd">            Trelent</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">basic_auth</span><span class="o">.</span><span class="n">authenticate</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">AuthException</span><span class="p">(</span><span class="s2">&quot;Not authenticated.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">inaccessible_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The inaccessible_callback function is called when a user attempts to access a resource that they are not authorized for.</span>
+<span class="sd">        It redirects the user to the login page, and provides them with an error message explaining why they were denied access.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Access the class instance</span>
+<span class="sd">            name: Set the name of the view that is used for authentication</span>
+<span class="sd">            **kwargs: Pass in any additional keyword arguments that are passed to the callback function</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A redirect to the login page</span>
+
+<span class="sd">        Doc Author:</span>
+<span class="sd">            Trelent</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">basic_auth</span><span class="o">.</span><span class="n">challenge</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="admin.mongoview.MyModelView.inaccessible_callback" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">inaccessible_callback</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The inaccessible_callback function is called when a user attempts to access a resource that they are not authorized for.
+It redirects the user to the login page, and provides them with an error message explaining why they were denied access.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>self</code></td>
+          <td>
+          </td>
+          <td><p>Access the class instance</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+          </td>
+          <td><p>Set the name of the view that is used for authentication</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td><p>Pass in any additional keyword arguments that are passed to the callback function</p></td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>A redirect to the login page</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="doc-author">
+  <summary>Doc Author</summary>
+  <p>Trelent</p>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>admin/mongoview.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">inaccessible_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The inaccessible_callback function is called when a user attempts to access a resource that they are not authorized for.</span>
+<span class="sd">    It redirects the user to the login page, and provides them with an error message explaining why they were denied access.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        self: Access the class instance</span>
+<span class="sd">        name: Set the name of the view that is used for authentication</span>
+<span class="sd">        **kwargs: Pass in any additional keyword arguments that are passed to the callback function</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A redirect to the login page</span>
+
+<span class="sd">    Doc Author:</span>
+<span class="sd">        Trelent</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">basic_auth</span><span class="o">.</span><span class="n">challenge</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="admin.mongoview.MyModelView.is_accessible" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_accessible</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The is_accessible function is used to check if the user has access to a particular view.
+It is called automatically by Flask-Login and will return True if the user can access a page,
+or False otherwise. This function will be passed into every view as an @login_required decorator.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>self</code></td>
+          <td>
+          </td>
+          <td><p>Access the attributes and methods of the class in python</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>True if the user is authenticated</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="doc-author">
+  <summary>Doc Author</summary>
+  <p>Trelent</p>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>admin/mongoview.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_accessible</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The is_accessible function is used to check if the user has access to a particular view.</span>
+<span class="sd">    It is called automatically by Flask-Login and will return True if the user can access a page,</span>
+<span class="sd">    or False otherwise. This function will be passed into every view as an @login_required decorator.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        self: Access the attributes and methods of the class in python</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if the user is authenticated</span>
+
+<span class="sd">    Doc Author:</span>
+<span class="sd">        Trelent</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">basic_auth</span><span class="o">.</span><span class="n">authenticate</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="n">AuthException</span><span class="p">(</span><span class="s2">&quot;Not authenticated.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="admin.views"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="admin.views.initialize_views" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_views</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The initialize_views function registers the admin views for the flask-admin extension.
+It is called in <strong>init</strong>.py, and therefore runs whenever this package is imported.</p>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>The admin object</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="doc-author">
+  <summary>Doc Author</summary>
+  <p>Trelent</p>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>admin/views.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">initialize_views</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The initialize_views function registers the admin views for the flask-admin extension.</span>
+<span class="sd">    It is called in __init__.py, and therefore runs whenever this package is imported.</span>
+
+<span class="sd">    Args:</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The admin object</span>
+
+<span class="sd">    Doc Author:</span>
+<span class="sd">        Trelent</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">admin</span><span class="o">.</span><span class="n">add_view</span><span class="p">(</span><span class="n">MyModelView</span><span class="p">(</span><span class="n">User</span><span class="p">))</span>
+    <span class="n">admin</span><span class="o">.</span><span class="n">add_view</span><span class="p">(</span><span class="n">MyModelView</span><span class="p">(</span><span class="n">Snippet</span><span class="p">))</span>
+    <span class="n">admin</span><span class="o">.</span><span class="n">add_view</span><span class="p">(</span><span class="n">MyModelView</span><span class="p">(</span><span class="n">Collection</span><span class="p">))</span>
+    <span class="n">admin</span><span class="o">.</span><span class="n">add_view</span><span class="p">(</span><span class="n">MyModelView</span><span class="p">(</span><span class="n">TokenBlocklist</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome to MkDocs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Welcome to MkDocs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../database/" class="md-footer__link md-footer__link--next" aria-label="Next: Database" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Database
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
