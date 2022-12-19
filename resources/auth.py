@@ -58,7 +58,6 @@ class SignupApi(Resource):
             complicated for this endpoint as we are awaiting reloads for three models:
             User, Collection and Snippet, all of which vary in `having to exist` before
             the other.
-
         """
 
         try:
@@ -161,14 +160,20 @@ class SignupApi(Resource):
 
 
 class LoginApi(Resource):
-    """Requests against the Snippet model to `api/auth/login`"""
+    """This class is a subclass of the Resource class from the Flask-RESTful library. It handles requests against the
+    Snippet model to `api/auth/login`"""
 
+    @staticmethod
     def post(self):
         """Authenticate a User object against the User model.
 
         Yields:
             Check the email.
             Check the password.
+
+        Args:
+            self: Reference the class itself
+
         Flags:
             Errors and returns status code with error message,
                 200, otherwise.
@@ -177,6 +182,7 @@ class LoginApi(Resource):
                 with an access token and a username.
                 sets a refresh-cookie in headers.
         """
+
         try:
             body = request.get_json()
             user = User.objects.get(email=body.get("email"))
